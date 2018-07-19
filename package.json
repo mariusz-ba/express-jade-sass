@@ -1,0 +1,21 @@
+{
+  "name": "express-jade-sass",
+  "version": "1.0.0",
+  "description": "Template for express application with jade view engine and sass preprocessor",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server/index.js",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-css": "node-sass --include-path server/scss server/scss/main.scss server/public/css/style.css --output-style compressed"
+  },
+  "author": "Mariusz Baran",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "nodemon": "^1.18.3"
+  }
+}
